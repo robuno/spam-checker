@@ -16,9 +16,7 @@
     <h1>Email Spam Classifier</h1>
     <div>
         <form method="POST" action="/predict">
-            <textarea rows="10" cols="40" name="content" placeholder="Enter email here">
-            {{ email }}
-            </textarea>
+            <textarea rows="10" cols="40" name="email-content" placeholder="Enter email here">{{ email }}</textarea>
             <div>
                 <button style="margin: 5px">
                     Submit
