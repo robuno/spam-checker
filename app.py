@@ -15,7 +15,7 @@ def predict_api():
     data = request.get_json(force=True) 
     email_text = data['email-content']
     prediction = make_pred(email_text)
-    return jsonify({'prediction': prediction, 'email': email_text})  # Return 
+    return jsonify({'prediction': prediction, 'email': email_text})  
 
 @app.route("/predict", methods=["POST"])
 def predict():
