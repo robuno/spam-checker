@@ -2,37 +2,40 @@
 <html>
 
 <head>
-    <title>Email Spam Classifier</title>
+    <title>Spam E-Mail Checker</title>
     <link rel= "stylesheet" href= "{{ url_for('static',filename='css/style.css') }}">
 </head>
 
 <body>
-    <h1>Email Spam Classifier</h1>
+    <h1>Spam E-Mail Checker</h1>
+    <p class="intro-myself">Developed by <a href="https://github.com/robuno">@robuno</a>. A few more classifier models will be added soon. Do not hesitate to contact with me for any questions. </p>
     <div>
         <form method="POST" action="/predict">
-            <textarea rows="10" cols="40" name="email-content" placeholder="Enter email here">{{ email }}</textarea>
+            <textarea rows="20" cols="60" name="email-content" placeholder="Enter your email here:">{{ email }}</textarea>
             <div>
-                <button style="margin: 5px">
-                    Submit
-                </button>
-                <button style="margin: 5px" disabled>
-                    <a href="\">Clear Textbox</a>
-                </button>
+                <button class="check-button">Check</button>
+                <button class="clear-button" disabled><a href="\">Clear Textbox</a></button>
                 <!-- <a href="\">Clear Textbox</a> -->
             </div>
         </form>
-        <p id="display">Your Text: {{ email }}</p>
-        <div>
-            {% if prediction %}
+        
+        <div class="pred-result">
             <p>Prediction:</p>
+            {% if prediction %}
             {% if prediction == 1 %}
-            <h3 style="color: red">Spam</h3>
+            <div class="pred-result-spam">
+                <h3>Spam</h3>
+            </div>
             {% else %}
-            <h3 style="color: green">Not Spam</h3>
+            <div class="pred-result-not-spam">
+                <h3>Not Spam</h3>
+            </div>
             {% endif %}
             {% endif %}
             <!-- <p id="display"></p> -->
         </div>
+
+        <p id="display">Your Text: {{ email }}</p>
     </div>
 </body>
 

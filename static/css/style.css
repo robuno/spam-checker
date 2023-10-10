@@ -1,0 +1,91 @@
+html {
+    height: 100%;
+    background: rgb(204,249,223);
+    background: linear-gradient(0deg, rgba(204,249,223,1) 0%, rgba(246,246,246,1) 100%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    text-align: center;
+    
+}
+
+textarea {
+    border-radius: 2%;
+}
+
+button {
+    margin:1.4rem;
+}
+
+.check-button {
+    background-color: white;
+    color: black;
+    font-size: 1.4rem;
+    border: 2px solid #306b32; 
+    border-radius: 10px;
+    padding:1rem;
+    transition: 0.4s;
+}
+
+.check-button:hover {
+    background-color: #306b32;
+    color: #fff;
+    font-size: 1.4rem;
+    border: 2px solid #306b32;
+    border-radius: 10px;
+    padding:1rem;
+}
+
+.clear-button {
+    background-color: rgb(236, 236, 236);
+    color: black;
+    font-size: 1.4rem;
+    border: 2px solid #702177;
+    border-radius: 10px;
+    padding:1rem;
+    text-decoration: none; 
+    transition: 0.4s;
+}
+
+.clear-button:hover {
+    background-color: #702177;
+    color: #fff;
+    font-size: 1.4rem;
+    border: 2px solid #702177; 
+    border-radius: 10px;
+    padding:1rem;
+}
+
+.clear-button:hover a{
+    color: #fff;
+}
+.clear-button a{
+    text-decoration: none; 
+  }
+
+.pred-result-spam {
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    text-align: center;
+    background-color: #fff;
+    border: 5px solid #ff0000; 
+    border-radius: 10px;
+    transition: 0.5s;
+    color: #ff0000;
+}
+
+.pred-result-not-spam {
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    text-align: center;
+    background-color: #fff;
+    border: 5px solid #00ff0d; 
+    border-radius: 10px;
+    transition: 0.5s;
+    color: #0d9614;
+}
+
+
